@@ -72,6 +72,8 @@ def apply_coupons(cart, coupons)
       cart_index+=1
     end
   end
+  puts "coupon cart"
+  puts cart
   puts "END APPLY COUPONS"
   cart
 end
