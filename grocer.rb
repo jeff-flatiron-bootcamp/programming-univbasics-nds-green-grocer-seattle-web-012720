@@ -65,7 +65,7 @@ def apply_coupons(cart, coupons)
         if(cart[cart_index][:count] >= coupon_num)
           item_coupon_price = i[:cost] / i[:num]
           cart[cart_index][:count] = cart[cart_index][:count] - i[:num]
-          new_hash = {:item => coupon_item_name + "W/COUPON", :price => item_coupon_price, :clearance => cart[cart_index][:clearance], :count => i[:num]}
+          new_hash = {:item => coupon_item_name + " W/COUPON", :price => item_coupon_price, :clearance => cart[cart_index][:clearance], :count => i[:num]}
           cart.push(new_hash)
         end
       end
