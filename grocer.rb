@@ -107,7 +107,9 @@ def checkout(cart, coupons)
   # some irritated customers
   
   puts "CONSOLIDATED CART BEFORE CONSOLIDATION"
+  puts "cart"
   puts cart
+  puts "coupons"
   puts coupons
   
   consolidated_cart = consolidate_cart(cart)
@@ -115,6 +117,7 @@ def checkout(cart, coupons)
   consolidated_cart = apply_clearance(consolidated_cart)
   
   puts "CONSOLIDATED CART BEFORE TOTAL"
+  puts "consolidated_cart"
   puts consolidated_cart
   
   total = 0.0
