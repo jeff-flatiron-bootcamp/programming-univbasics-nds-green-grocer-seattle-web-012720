@@ -59,9 +59,7 @@ def apply_coupons(cart, coupons)
         if(cart[cart_item][:count] - i[:num] >-1)
           item_found = true
           found_cart_item = {:item => cart[cart_index][:item], :price => cart[cart_index][:price], :clearance => cart[cart_index][:clearance], :count => cart[cart_index][:count]}
-          
           cart[cart_index][:count]-= i[:num]
-          
         end
         break
       end
