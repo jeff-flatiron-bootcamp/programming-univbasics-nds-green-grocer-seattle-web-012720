@@ -108,6 +108,7 @@ def checkout(cart, coupons)
   
   puts "CONSOLIDATED CART BEFORE CONSOLIDATION"
   puts cart
+  puts coupons
   
   consolidated_cart = consolidate_cart(cart)
   consolidated_cart = apply_coupons(consolidated_cart, coupons)
