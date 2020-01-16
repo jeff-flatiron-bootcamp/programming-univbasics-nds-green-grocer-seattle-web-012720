@@ -105,6 +105,7 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  puts "BEGIN CALLED CHECKOUT"
   
   puts "CONSOLIDATED CART BEFORE CONSOLIDATION"
   puts "cart"
@@ -131,5 +132,6 @@ def checkout(cart, coupons)
   if (total > 100.00)
     total = total - (total * 0.10.round(2))
   end
+  puts "END CALLED CHECKOUT"
   total
 end
