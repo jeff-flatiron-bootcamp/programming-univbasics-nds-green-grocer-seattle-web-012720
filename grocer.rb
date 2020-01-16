@@ -110,6 +110,9 @@ def checkout(cart, coupons)
   consolidated_cart = apply_coupons(consolidated_cart, coupons)
   consolidated_cart = apply_clearance(consolidated_cart)
   
+  puts "CONSOLIDATED CART BEFORE TOTAL"
+  puts consolidated_cart
+  
   total = 0.0
   for i in consolidated_cart do
   
