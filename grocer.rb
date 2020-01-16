@@ -58,7 +58,7 @@ def apply_coupons(cart, coupons)
     coupon_cost = i[:cost]
     
     cart_index = 0
-    puts "Cycle cart"
+    puts "Cycle cart looking for #{coupon_item_name}"
     while(cart[cart_index]) do
       puts cart[cart_index]
       
