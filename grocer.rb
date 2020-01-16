@@ -61,7 +61,12 @@ def apply_coupons(cart, coupons)
     puts "Cycle cart looking for #{coupon_item_name}"
     while(cart[cart_index]) do
       puts cart[cart_index]
-      
+      if(cart[cart_index][:item] == coupon_item_name)
+        if(cart[cart_index][:count] >= coupon_num)
+          item_coupon_price = i[:cost] / i[:num]
+          new_hash = {:item => coupon_item_name, :price => item_coupon_price, :clearance => cart[cart_index][:clearance], :count => i[:num]}
+        end
+      end
       cart_index+=1
     end
   end
