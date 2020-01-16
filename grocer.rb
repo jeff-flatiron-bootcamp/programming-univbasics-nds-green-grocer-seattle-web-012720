@@ -60,6 +60,8 @@ def apply_coupons(cart, coupons)
     cart_index = 0
     while(cart[cart_index]) do
       cart[cart_index}]
+      
+      cart_index+=1
     end
   end
   puts "END APPLY COUPONS"
