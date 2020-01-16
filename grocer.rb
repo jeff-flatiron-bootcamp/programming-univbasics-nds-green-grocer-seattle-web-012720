@@ -44,23 +44,12 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-
-
-  puts "BEGIN APPLY COUPONS"
-  puts "cart"
-  puts cart
-  puts "coupons"
-  puts coupons
-
   for i in coupons do
     coupon_item_name = i[:item]
     coupon_num = i[:num]
     coupon_cost = i[:cost]
-    
     cart_index = 0
-    puts "Cycle cart looking for #{coupon_item_name}"
     while(cart[cart_index]) do
-      puts cart[cart_index]
       if(cart[cart_index][:item] == coupon_item_name)
         if(cart[cart_index][:count] >= coupon_num)
           item_coupon_price = i[:cost] / i[:num]
@@ -72,9 +61,6 @@ def apply_coupons(cart, coupons)
       cart_index+=1
     end
   end
-  puts "coupon cart"
-  puts cart
-  puts "END APPLY COUPONS"
   cart
 end
 
@@ -107,33 +93,17 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-  puts "BEGIN CALLED CHECKOUT"
-  
-  puts "CONSOLIDATED CART BEFORE CONSOLIDATION"
-  puts "cart"
-  puts cart
-  puts "coupons"
-  puts coupons
-  
   consolidated_cart = consolidate_cart(cart)
-  puts "CONSOLIDATED CART AFTER CONSOLIDATION"
-  puts consolidated_cart
   consolidated_cart = apply_coupons(consolidated_cart, coupons)
   consolidated_cart = apply_clearance(consolidated_cart)
   
-  puts "CONSOLIDATED CART BEFORE TOTAL"
-  puts "consolidated_cart"
-  puts consolidated_cart
-  
   total = 0.0
   for i in consolidated_cart do
-  
     total = total + i[:price] * i[:count]
   end
   
   if (total > 100.00)
     total = total - (total * 0.10.round(2))
   end
-  puts "END CALLED CHECKOUT"
   total
 end
