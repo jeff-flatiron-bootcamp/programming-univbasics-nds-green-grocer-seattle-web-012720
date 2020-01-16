@@ -64,6 +64,7 @@ def apply_coupons(cart, coupons)
       if(cart[cart_index][:item] == coupon_item_name)
         puts "Before if test cart_item count = #{cart[cart_index][:count]} coupon count = #{i[:num]}"
         someval = cart[cart_item][:count] - i[:num]
+        puts "Someval = #{someval}"
         if((cart[cart_item][:count] - i[:num]) >-1)
           puts "If statement was a success"
           item_found = true
