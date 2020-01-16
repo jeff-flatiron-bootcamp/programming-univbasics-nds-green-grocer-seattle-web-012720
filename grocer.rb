@@ -45,13 +45,22 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
 
-  end
-  
-  puts "coupon cart"
+
+  puts "BEGIN APPLY COUPONS"
+  puts "cart"
   puts cart
+  puts "coupons"
+  puts coupons
   
-  "ENG apply_coupons"
-  cart
+    for i in coupons do
+      coupon_item_name = i[:item]
+      coupon_num = i[:num]
+      coupon_cost = i[:cost]
+      
+      cart_index = 0
+    end
+  puts "END APPLY COUPONS"
+  
 end
 
 def apply_clearance(cart)
