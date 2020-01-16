@@ -44,42 +44,7 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
-  
-  puts "BEGIN apply_coupons"
-  puts "cart"
-  puts cart
-  
-  puts "coupons"
-  puts coupons
-  
-  for i in coupons do
-    
-    coupon_item_name = i[:item]
-    cart_index = 0
-    item_found = false
-    found_cart_item = {}
-    while(cart[cart_index]) do
-      if(cart[cart_index][:item] == coupon_item_name)
-        puts "Before if test cart_item count = #{cart[cart_index][:count]} coupon count = #{i[:num]}"
-        someval = cart[cart_item][:count] - i[:num]
-        puts "Someval = #{someval}"
-        if((cart[cart_item][:count] - i[:num]) >-1)
-          puts "If statement was a success"
-          item_found = true
-          found_cart_item = {:item => cart[cart_index][:item], :price => cart[cart_index][:price], :clearance => cart[cart_index][:clearance], :count => cart[cart_index][:count]}
-          cart[cart_index][:count]-= i[:num]
-        end
-        break
-      end
-      cart_index+=1
-    end
-    
-    if(item_found)
-      cart.push(found_cart_item)
-      cart.last()[:item] = cart.last()[:item] + " W/COUPON"
-      cart.last()[:price] = i[:cost] / i[:num]
-      cart.last()[:count] = i[:num]
-    end
+
   end
   
   puts "coupon cart"
