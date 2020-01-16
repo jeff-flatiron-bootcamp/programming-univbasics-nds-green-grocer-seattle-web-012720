@@ -45,8 +45,6 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
-  coupons_applied_cart = []
-  
   puts "BEGIN apply_coupons"
   puts "cart"
   puts cart
@@ -74,7 +72,6 @@ def apply_coupons(cart, coupons)
         break
       end
       cart_index+=1
-    
     end
     
     if(item_found)
