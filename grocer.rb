@@ -56,10 +56,13 @@ def apply_coupons(cart, coupons)
     found_cart_item = {}
     while(cart[cart_index]) do
       if(cart[cart_index][:item] == coupon_item_name)
-        item_found = true
-        found_cart_item = {:item => cart[cart_index][:item], :price => cart[cart_index][:price], :clearance => cart[cart_index][:clearance], :count => cart[cart_index][:count]}
-        cart[cart_index][:count]-= i[:num]
-        break
+        if(cart[cart_item][:count] - i[:num] >-1)
+          item_found = true
+          found_cart_item = {:item => cart[cart_index][:item], :price => cart[cart_index][:price], :clearance => cart[cart_index][:clearance], :count => cart[cart_index][:count]}
+          
+          cart[cart_index][:count]-= i[:num]
+          break
+        end
       end
       cart_index+=1
     
