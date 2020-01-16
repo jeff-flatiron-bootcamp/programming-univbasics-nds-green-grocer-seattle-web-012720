@@ -61,8 +61,9 @@ def apply_coupons(cart, coupons)
           found_cart_item = {:item => cart[cart_index][:item], :price => cart[cart_index][:price], :clearance => cart[cart_index][:clearance], :count => cart[cart_index][:count]}
           
           cart[cart_index][:count]-= i[:num]
-          break
+          
         end
+        break
       end
       cart_index+=1
     
