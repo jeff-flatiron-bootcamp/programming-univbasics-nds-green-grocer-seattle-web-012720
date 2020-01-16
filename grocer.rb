@@ -58,6 +58,9 @@ def apply_coupons(cart, coupons)
     coupon_cost = i[:cost]
     
     cart_index = 0
+    while(cart[cart_index]) do
+      cart[cart_index]
+    end
   end
   puts "END APPLY COUPONS"
   
