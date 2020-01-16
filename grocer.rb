@@ -47,6 +47,12 @@ def apply_coupons(cart, coupons)
   
   coupons_applied_cart = []
   
+  puts "BEGIN apply_coupons"
+  puts "cart"
+  puts cart
+  
+  puts "coupons"
+  puts coupons
   
   for i in coupons do
     
