@@ -77,9 +77,6 @@ def apply_clearance(cart)
       i[:price] = (i[:price] - (i[:price] * 0.20).round(2))
     end
   end
-  
-  #puts "END OF apply_clearance"
-  #pp cart
   cart
 end
 
