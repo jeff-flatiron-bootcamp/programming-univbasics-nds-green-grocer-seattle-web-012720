@@ -51,14 +51,14 @@ def apply_coupons(cart, coupons)
   puts cart
   puts "coupons"
   puts coupons
-  
-    for i in coupons do
-      coupon_item_name = i[:item]
-      coupon_num = i[:num]
-      coupon_cost = i[:cost]
-      
-      cart_index = 0
-    end
+
+  for i in coupons do
+    coupon_item_name = i[:item]
+    coupon_num = i[:num]
+    coupon_cost = i[:cost]
+    
+    cart_index = 0
+  end
   puts "END APPLY COUPONS"
   
 end
