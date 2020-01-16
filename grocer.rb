@@ -81,8 +81,8 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   #value = {(i[:price] * 0.20).round(2)
-  puts "BEGIN OF apply_clearance"
-  puts cart
+  #puts "BEGIN OF apply_clearance"
+  #puts cart
   
   for i in cart do
     if(i[:clearance] == true)
@@ -90,8 +90,8 @@ def apply_clearance(cart)
     end
   end
   
-  puts "END OF apply_clearance"
-  pp cart
+  #puts "END OF apply_clearance"
+  #pp cart
   cart
 end
 
