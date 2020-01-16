@@ -80,7 +80,11 @@ def apply_coupons(cart, coupons)
       cart.last()[:count] = i[:num]
     end
   end
-
+  
+  puts "coupon cart"
+  puts cart
+  
+  "ENG apply_coupons"
   cart
 end
 
